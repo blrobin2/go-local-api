@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	"net/http"
+	"github.com/blrobin2/go-local-api/api/dtos"
+	"github.com/blrobin2/go-local-api/api/models"
 	"github.com/gin-gonic/gin"
-	"github.com/blrobin2/go-local-api/models"
-	"github.com/blrobin2/go-local-api/dtos"
+	"net/http"
 )
 
 // GET /contracts

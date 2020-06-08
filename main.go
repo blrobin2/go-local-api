@@ -1,15 +1,17 @@
 package main
 
 import (
-	"net/http"
 	"github.com/gin-gonic/gin"
+	"net/http"
 
-	"github.com/blrobin2/go-local-api/models"
-	"github.com/blrobin2/go-local-api/controllers"
+	"github.com/blrobin2/go-local-api/api/controllers"
+	"github.com/blrobin2/go-local-api/api/models"
 )
 
 func main() {
 	r := gin.Default()
+	r.Use(gin.Logger())
+	r.Use(gin.Recovery())
 
 	models.ConnectDatabase()
 
